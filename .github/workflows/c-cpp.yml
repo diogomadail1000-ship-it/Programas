@@ -13,8 +13,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Build all cpp files
-      run: |
-        for file in *.cpp; do
-          g++ "$file" -o "${file%.cpp}"
-        done
+    - name: Compile P1
+      run: g++ P1.cpp -o P1
+
+    - name: Compile P2
+      run: g++ P2.cpp -o P2
+
+    - name: Compile P3
+      run: g++ P3.cpp -o P3
+
+    - name: Compile P4
+      run: g++ P4.cpp -o P4
